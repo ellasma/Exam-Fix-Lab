@@ -33,13 +33,16 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
-        // to be completed
-        if currentAge ≥ 16;//Output: employee can drive
-        else
-            if currentAge ≤ 16;//Output: employee can' drive
-            return(16-currentAge);
+        if(age>16){//Output: employee can drive
+            System.out.println("Employee can drive");
+            return true;
+        }
+        else {
+            System.out.println("Employee can't drive");
+            return false;
+        }
     }
-
+}
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
@@ -57,8 +60,8 @@ public class Employee{
      */
     public void paySalary(){
         // to be completed
-        fullname=John Deere;
-        print="John Deere has received a wire transfer of 70 CAD.";
-        reset unpaidHours=0;
+        fullname="John Deere";
+        // print="John Deere has received a wire transfer of 70 CAD.";
+        // reset unpaidHours=0;
     }
 }
