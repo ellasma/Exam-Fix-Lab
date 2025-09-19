@@ -10,6 +10,8 @@ public class Employee{
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
+    //Get variables for yearOfBirth
+    //Set variables to yearOfBirth
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
@@ -32,6 +34,10 @@ public class Employee{
     public boolean canDrive(){
         int age = calculateAge(2025);
         // to be completed
+        if currentAge ≥ 16;//Output: employee can drive
+        else
+            if currentAge ≤ 16;//Output: employee can' drive
+            return(16-currentAge);
     }
 
     /*
@@ -39,6 +45,11 @@ public class Employee{
      */
     private double calculatePay(){
         // to be completed
+        // Get variables for unpaidHours and hourlyWage
+        // Set hourlyWage x hours worked=Pay
+        // Set tax to 30%
+        // Set pay-tax=net pay
+        // print net pay
     }
 
     /*
@@ -46,5 +57,8 @@ public class Employee{
      */
     public void paySalary(){
         // to be completed
+        fullname=John Deere;
+        print="John Deere has received a wire transfer of 70 CAD.";
+        reset unpaidHours=0;
     }
 }
