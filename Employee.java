@@ -42,26 +42,40 @@ public class Employee{
             return false;
         }
     }
-}
+
     /*
      * Returns the net pay for the outstanding unpaid hours
+     * @return net pay
      */
     private double calculatePay(){
-        // to be completed
-        // Get variables for unpaidHours and hourlyWage
-        // Set hourlyWage x hours worked=Pay
-        // Set tax to 30%
-        // Set pay-tax=net pay
-        // print net pay
+        double grossPay = hourlyWage * unpaidHours;
+        double tax = grossPay * 0.30;
+        double netPay = grossPay - tax;
+        
+        System.out.println("Net pay: $" + netPay);
+        return netPay;
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        // to be completed
-        fullname="John Deere";
-        // print="John Deere has received a wire transfer of 70 CAD.";
-        // reset unpaidHours=0;
+        double netPay = calculatePay();
+        System.out.println(fullname + " has received a wire transfer of $ " + netPay + "CAD.");
+        unpaidHours=0.0;
+    }
+    
+    public void addUnpaidHours(double hours){
+        if (hours > 0){
+            unpaidHours += hours;
+        }
+    }
+    
+    
+    public static void main(String[] args){
+        Employee emp = new Employee("John Deere",2000,20.5);
+        emp.canDrive();
+        emp.addUnpaidHours(10);
+        emp.paySalary();
     }
 }
